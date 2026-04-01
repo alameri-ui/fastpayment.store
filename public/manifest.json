@@ -1,0 +1,26 @@
+{
+  "name": "Falcon IPTV",
+  "short_name": "Falcon",
+  "description": "أقوى وأسرع سيرفر IPTV للبث المباشر",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0d1423",
+  "theme_color": "#d4af37",
+  "lang": "ar",
+  "dir": "rtl",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

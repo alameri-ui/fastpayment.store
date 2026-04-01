@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+  <html lang="ar" dir="rtl">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>دليل نشر فالكون IPTV على Hostinger</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap');
+    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: 'Cairo', Arial, sans-serif;
+      direction: rtl;
+      background: #f8f9fa;
+      color: #1a1a2e;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .cover {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 40px;
+      page-break-after: always;
+    }
+
+    .cover .logo {
+      font-size: 60px;
+      margin-bottom: 20px;
+    }
+
+    .cover h1 {
+      font-size: 42px;
+      font-weight: 900;
+      color: #fbbf24;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    .cover h2 {
+      font-size: 22px;
+      font-weight: 400;
+      color: #94a3b8;
+      margin-bottom: 40px;
+    }
+
+    .cover .badge {
+      background: rgba(251,191,36,0.15);
+      border: 1px solid rgba(251,191,36,0.4);
+      color: #fbbf24;
+      padding: 8px 24px;
+      border-radius: 50px;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 50px;
+    }
+
+    .cover .meta {
+      color: #64748b;
+      font-size: 13px;
+      margin-top: 60px;
+    }
+
+    .toc-page {
+      padding: 50px 60px;
+      background: white;
+      min-height: 100vh;
+      page-break-after: always;
+    }
+
+    .toc-page h2 {
+      font-size: 28px;
+      font-weight: 900;
+      color: #1a1a2e;
+      margin-bottom: 30px;
+      padding-bottom: 15px;
+      border-bottom: 3px solid #fbbf24;
+    }
+
+    .toc-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 0;
+      border-bottom: 1px dashed #e2e8f0;
+      font-size: 15px;
+    }
+
+    .toc-item .num {
+      background: #fbbf24;
+      color: #1a1a2e;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 13px;
+      flex-shrink: 0;
+      margin-left: 12px;
+    }
+
+    .toc-item .title { flex: 1; font-weight: 600; }
+    .toc-item .page { color: #94a3b8; font-size: 13px; }
+
+    .page {
+      padding: 50px 60px;
+      background: white;
+      min-height: 100vh;
+      page-break-after: always;
+    }
+
+    .page-header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 35px;
+      padding-bottom: 20px;
+      border-bottom: 3px solid #fbbf24;
+    }
+
+    .step-badge {
+      background: #1a1a2e;
+      color: #fbbf24;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    h2.section-title {
+      font-size: 26px;
+      font-weight: 900;
+      color: #1a1a2e;
+    }
+
+    h3 {
+      font-size: 17px;
+      font-weight: 700;
+      color: #1a1a2e;
+      margin: 25px 0 12px;
+    }
+
+    p { margin-bottom: 12px; color: #374151; }
+
+    .info-box {
+      background: #eff6ff;
+      border-right: 4px solid #3b82f6;
+      padding: 15px 20px;
+      border-radius: 8px;
+      margin: 18px 0;
+      font-size: 13px;
+      color: #1e40af;
+    }
+
+    .warning-box {
+      background: #fef3c7;
+      border-right: 4px solid #f59e0b;
+      padding: 15px 20px;
+      border-radius: 8px;
+      margin: 18px 0;
+      font-size: 13px;
+      color: #92400e;
+    }
+
+    .success-box {
+      background: #f0fdf4;
+      border-right: 4px solid #22c55e;
+      padding: 15px 20px;
+      border-radius: 8px;
+      margin: 18px 0;
+      font-size: 13px;
+      color: #15803d;
+    }
+
+    .danger-box {
+      background: #fef2f2;
+      border-right: 4px solid #ef4444;
+      padding: 15px 20px;
+      border-radius: 8px;
+      margin: 18px 0;
+      font-size: 13px;
+      color: #991b1b;
+    }
+
+    code {
+      background: #1e293b;
+      color: #e2e8f0;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 13px;
+      direction: ltr;
+      display: inline-block;
+    }
+
+    .code-block {
+      background: #1e293b;
+      color: #e2e8f0;
+      padding: 20px 25px;
+      border-radius: 10px;
+      font-family: 'Courier New', monospace;
+      font-size: 13px;
+      direction: ltr;
+      text-align: left;
+      margin: 15px 0;
+      overflow-x: auto;
+      line-height: 1.9;
+      border: 1px solid #334155;
+    }
+
+    .code-block .comment { color: #64748b; }
+    .code-block .cmd { color: #4ade80; }
+    .code-block .val { color: #fbbf24; }
+    .code-block .kw { color: #60a5fa; }
+
+    .steps-list {
+      counter-reset: steps;
+      list-style: none;
+      padding: 0;
+    }
+
+    .steps-list li {
+      counter-increment: steps;
+      padding: 15px 0 15px 0;
+      border-bottom: 1px solid #f1f5f9;
+      display: flex;
+      gap: 15px;
+      align-items: flex-start;
+    }
+
+    .steps-list li::before {
+      content: counter(steps);
+      background: #fbbf24;
+      color: #1a1a2e;
+      min-width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+
+    .steps-list li .step-content { flex: 1; }
+    .steps-list li .step-title { font-weight: 700; margin-bottom: 4px; color: #1a1a2e; }
+    .steps-list li .step-desc { color: #6b7280; font-size: 13px; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 13px;
+    }
+
+    table th {
+      background: #1a1a2e;
+      color: #fbbf24;
+      padding: 12px 15px;
+      text-align: right;
+      font-weight: 700;
+    }
+
+    table td {
+      padding: 10px 15px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    table tr:nth-child(even) td { background: #f8fafc; }
+    table tr:hover td { background: #eff6ff; }
+
+    .hosting-card {
+      border: 2px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 25px;
+      margin: 15px 0;
+    }
+
+    .hosting-card.recommended {
+      border-color: #fbbf24;
+      background: #fffbeb;
+    }
+
+    .hosting-card h3 { margin-top: 0; color: #1a1a2e; }
+
+    .rec-badge {
+      background: #fbbf24;
+      color: #1a1a2e;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 10px;
+      border-radius: 20px;
+      margin-right: 8px;
+    }
+
+    .check-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .check-list li {
+      padding: 6px 0;
+      color: #374151;
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    .check-list li::before {
+      content: "✓";
+      color: #22c55e;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+
+    .icon-step {
+      font-size: 28px;
+      margin-left: 10px;
+    }
+
+    .footer-bar {
+      background: #1a1a2e;
+      color: #64748b;
+      text-align: center;
+      padding: 20px;
+      font-size: 12px;
+      margin-top: 30px;
+      border-radius: 8px;
+    }
+
+    @media print {
+      body { background: white; }
+      .page, .cover, .toc-page { page-break-after: always; }
+      .code-block { font-size: 11px; }
+      a { text-decoration: none; color: inherit; }
+    }
+
+    .print-btn {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background: #fbbf24;
+      color: #1a1a2e;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      font-family: 'Cairo', sans-serif;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      z-index: 1000;
+    }
+
+    .print-btn:hover { background: #f59e0b; }
+
+    @media print {
+      .print-btn { display: none; }
+    }
+  </style>
+  </head>
+  <body>
+
+  <button class="print-btn" onclick="window.print()">🖨️ طباعة / حفظ PDF</button>
+
+  <!-- COVER PAGE -->
+  <div class="cover">
+    <div class="logo">🦅</div>
+    <h1>فالكون IPTV</h1>
+    <h2>دليل النشر والاستضافة على Hostinger</h2>
+    <div class="badge">⚡ دليل تقني مفصل خطوة بخطوة</div>
+    
+    <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:16px; padding:30px 50px; margin-top:20px;">
+      <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:30px; text-align:center;">
+        <div>
+          <div style="font-size:32px; color:#fbbf24; font-weight:900;">Node.js</div>
+          <div style="color:#94a3b8; font-size:13px; margin-top:4px;">بيئة التشغيل</div>
+        </div>
+        <div>
+          <div style="font-size:32px; color:#fbbf24; font-weight:900;">PostgreSQL</div>
+          <div style="color:#94a3b8; font-size:13px; margin-top:4px;">قاعدة البيانات</div>
+        </div>
+        <div>
+          <div style="font-size:32px; color:#fbbf24; font-weight:900;">VPS</div>
+          <div style="color:#94a3b8; font-size:13px; margin-top:4px;">نوع الاستضافة</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="meta">
+      <div>إصدار المشروع: 1.0 — مارس 2026</div>
+      <div style="margin-top:8px;">يتطلب استضافة VPS أو Cloud مع دعم Node.js 20+ و PostgreSQL</div>
+    </div>
+  </div>
+
+  <!-- TABLE OF CONTENTS -->
+  <div class="toc-page">
+    <h2>📋 فهرس المحتويات</h2>
+    
+    <div class="toc-item">
+      <div style="display:flex; align-items:center;">
+        <div class="num">1</div>
+        <div class="title">نوع الاستضافة المطلوبة على Hostinger</div>
+      </div>
+      <div class="page">صفحة 3</div>
+    </div>
+    <div class="toc-item">
+      <div style="display:flex; align-items:center;">
+        <div class="num">2</div>
+        <div class="title">المتطلبات التقنية الكاملة</div>
+      </div>
+      <div class="page">صفحة 4</div>
+    </div>
+    <div class="toc-item">
+      <div style="display:flex; align-items:center;">
+        <div class="num">3</div>
+        <div class="title">إعداد VPS وتثبيت البرامج (SSH)</div>
+      </div>
+      <div class="page">صفحة 5</div>
+    </div>
+    <div class="toc-item">
+      <div style="display:flex; align-items:center;">
+        <div class="num">4</div>
+        <div class="title">رفع الملفات إلى السيرفر</div>
+      </div>
+      <div class="page">صفحة 6</div>
+    </div>
+    <div class="toc-item">
+      <div style="display:flex; align-items:center;">
+        <div class="num">5</div>
+        <div class="title">إعداد قاعدة البيانات PostgreSQL</div>
+      </div>
+      <div class="page">صفحة 7</div>
+    </div>
+    <div class="toc-item">
+      <div style="display:flex; align-items:center;">
+        <div class="num">6</div>
+        <div class="title">متغيرات البيئة (.env)</div>
+      </div>
+      <div class="page">صفحة 8</div>
+    </div>
+    <div class="toc-item">
+      <div style="display:flex; align-items:center;">
+        <div class="num">7</div>
+        <div class="title">تشغيل المشروع لأول مرة</div>
+      </div>
+      <div class="page">صفحة 9</div>
+    </div>
+    <div class="toc-item">
+      <div style="display:flex; align-items:center;">
+        <div class="num">8</div>
+        <div class="title">إعداد PM2 (تشغيل مستمر)</div>
+      </div>
+      <div class="page">صفحة 10</div>
+    </div>
+    <div class="toc-item">
+      <div style="display:flex; align-items:center;">
+        <div class="num">9</div>
+        <div class="title">إعداد Nginx (ربط الدومين)</div>
+      </div>
+      <div class="page">صفحة 11</div>
+    </div>
+    <div class="toc-item">
+      <div style="display:flex; align-items:center;">
+        <div class="num">10</div>
+        <div class="title">شهادة SSL مجانية (HTTPS)</div>
+      </div>
+      <div class="page">صفحة 12</div>
+    </div>
+    <div class="toc-item">
+      <div style="display:flex; align-items:center;">
+        <div class="num">11</div>
+        <div class="title">الملفات التي ترفعها فقط</div>
+      </div>
+      <div class="page">صفحة 13</div>
+    </div>
+    <div class="toc-item">
+      <div style="display:flex; align-items:center;">
+        <div class="num">12</div>
+        <div class="title">استكشاف الأخطاء الشائعة</div>
+      </div>
+      <div class="page">صفحة 14</div>
+    </div>
+  </div>
+
+  <!-- PAGE 1: Hosting Type -->
+  <div class="page">
+    <div class="page-header">
+      <span class="step-badge">الخطوة 1</span>
+      <h2 class="section-title">🖥️ نوع الاستضافة المطلوبة على Hostinger</h2>
+    </div>
+
+    <div class="danger-box">
+      ⚠️ <strong>مهم جداً:</strong> المشروع يتطلب Node.js + PostgreSQL — لا يعمل على الاستضافة المشتركة (Shared Hosting) العادية
+    </div>
+
+    <p>يجب عليك شراء <strong>استضافة VPS</strong> من Hostinger. ادخل على: <code>hostinger.com</code> → اختر <strong>VPS Hosting</strong></p>
+
+    <h3>🏷️ الخطط المتاحة (اختر حسب حاجتك)</h3>
+
+    <div class="hosting-card">
+      <h3>KVM 1 — الحد الأدنى</h3>
+      <table>
+        <tr><td><strong>السعر</strong></td><td>~3.99$/شهر</td></tr>
+        <tr><td><strong>CPU</strong></td><td>1 vCPU</td></tr>
+        <tr><td><strong>RAM</strong></td><td>1 GB</td></tr>
+        <tr><td><strong>تخزين</strong></td><td>20 GB NVMe</td></tr>
+      </table>
+      <div class="warning-box">⚡ مناسب إذا كان عدد الزوار أقل من 100/يوم</div>
+    </div>
+
+    <div class="hosting-card recommended">
+      <h3><span class="rec-badge">⭐ موصى به</span> KVM 2</h3>
+      <table>
+        <tr><td><strong>السعر</strong></td><td>~5.99$/شهر</td></tr>
+        <tr><td><strong>CPU</strong></td><td>2 vCPU</td></tr>
+        <tr><td><strong>RAM</strong></td><td>2 GB</td></tr>
+        <tr><td><strong>تخزين</strong></td><td>40 GB NVMe</td></tr>
+      </table>
+      <div class="success-box">✅ مثالي لمتجر IPTV متوسط الحجم مع قاعدة بيانات PostgreSQL و PM2</div>
+    </div>
+
+    <h3>📌 خطوات الشراء من Hostinger</h3>
+    <ol class="steps-list">
+      <li>
+        <div class="step-content">
+          <div class="step-title">اذهب إلى hostinger.com</div>
+          <div class="step-desc">أنشئ حساباً أو سجّل الدخول</div>
+        </div>
+      </li>
+      <li>
+        <div class="step-content">
+          <div class="step-title">اختر "VPS Hosting" من القائمة العلوية</div>
+          <div class="step-desc">ستجد خيارات KVM 1, 2, 4...</div>
+        </div>
+      </li>
+      <li>
+        <div class="step-content">
+          <div class="step-title">اختر KVM 2 (موصى به) ثم اشترك</div>
+          <div class="step-desc">اختر نظام التشغيل: Ubuntu 22.04 LTS</div>
+        </div>
+      </li>
+      <li>
+        <div class="step-content">
+          <div class="step-title">بعد الشراء → اذهب إلى لوحة Hostinger → VPS → Manage</div>
+          <div class="step-desc">ستجد IP السيرفر وبيانات SSH (root + كلمة المرور)</div>
+        </div>
+      </li>
+    </ol>
+  </div>
+
+  <!-- PAGE 2: Requirements -->
+  <div class="page">
+    <div class="page-header">
+      <span class="step-badge">الخطوة 2</span>
+      <h2 class="section-title">📦 المتطلبات التقنية الكاملة</h2>
+    </div>
+
+    <h3>البرامج المطلوبة على السيرفر</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>البرنامج</th>
+          <th>الإصدار</th>
+          <th>الاستخدام</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Node.js</td><td>20.x LTS أو أحدث</td><td>تشغيل الباك-إند</td></tr>
+        <tr><td>npm</td><td>10.x+</td><td>إدارة الحزم</td></tr>
+        <tr><td>PostgreSQL</td><td>15 أو 16</td><td>قاعدة البيانات</td></tr>
+        <tr><td>PM2</td><td>أحدث إصدار</td><td>إبقاء التطبيق يعمل دائماً</td></tr>
+        <tr><td>Nginx</td><td>أحدث إصدار</td><td>ربط الدومين + HTTPS</td></tr>
+        <tr><td>Certbot</td><td>أحدث إصدار</td><td>شهادة SSL مجانية</td></tr>
+      </tbody>
+    </table>
+
+    <h3>الملفات التي ترفعها من مشروعك</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>الملف/المجلد</th>
+          <th>المحتوى</th>
+          <th>مطلوب؟</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><code>dist/index.cjs</code></td><td>الباك-إند المبني (الخادم)</td><td>✅ مطلوب</td></tr>
+        <tr><td><code>dist/public/</code></td><td>الفرونت-إند المبني (HTML+JS+CSS)</td><td>✅ مطلوب</td></tr>
+        <tr><td><code>package.json</code></td><td>قائمة الحزم</td><td>✅ مطلوب</td></tr>
+        <tr><td><code>shared/schema.ts</code></td><td>مخطط قاعدة البيانات</td><td>✅ مطلوب</td></tr>
+        <tr><td><code>drizzle.config.ts</code></td><td>إعدادات قاعدة البيانات</td><td>✅ مطلوب</td></tr>
+        <tr><td><code>migrations/</code></td><td>ملفات الترحيل (إن وجدت)</td><td>✅ مطلوب</td></tr>
+        <tr><td><code>.env</code></td><td>متغيرات البيئة (تُنشئه على السيرفر)</td><td>✅ مطلوب</td></tr>
+        <tr><td><code>node_modules/</code></td><td>مكتبات Node.js</td><td>❌ لا ترفعه (سيُثبَّت تلقائياً)</td></tr>
+        <tr><td><code>client/</code></td><td>كود الفرونت-إند المصدري</td><td>❌ غير ضروري في الإنتاج</td></tr>
+        <tr><td><code>server/</code></td><td>كود الباك-إند المصدري</td><td>❌ غير ضروري في الإنتاج</td></tr>
+      </tbody>
+    </table>
+
+    <div class="info-box">
+      💡 <strong>ملاحظة:</strong> الملفات المبنية في مجلد <code>dist/</code> هي التي تعمل في الإنتاج. <code>dist/index.cjs</code> هو الخادم الكامل.
+    </div>
+
+    <h3>برامج على جهازك (Windows/Mac)</h3>
+    <ul class="check-list">
+      <li><strong>WinSCP</strong> أو <strong>FileZilla</strong> — لرفع الملفات عبر SFTP</li>
+      <li><strong>PuTTY</strong> أو <strong>Terminal (Mac/Linux)</strong> — للاتصال بـ SSH</li>
+      <li><strong>VS Code</strong> — لتعديل ملف .env قبل الرفع</li>
+    </ul>
+  </div>
+
+  <!-- PAGE 3: VPS Setup -->
+  <div class="page">
+    <div class="page-header">
+      <span class="step-badge">الخطوة 3</span>
+      <h2 class="section-title">🔧 إعداد VPS وتثبيت البرامج</h2>
+    </div>
+
+    <div class="info-box">
+      📡 افتح PuTTY أو Terminal واتصل بالسيرفر: <code>ssh root@IP_السيرفر</code>
+      <br>أدخل كلمة المرور التي أعطاها لك Hostinger
+    </div>
+
+    <h3>أولاً: تحديث النظام</h3>
+    <div class="code-block">
+  <span class="comment"># تحديث النظام</span>
+  <span class="cmd">apt update && apt upgrade -y</span>
+    </div>
+
+    <h3>ثانياً: تثبيت Node.js 20</h3>
+    <div class="code-block">
+  <span class="comment"># إضافة مستودع Node.js 20</span>
+  <span class="cmd">curl -fsSL https://deb.nodesource.com/setup_20.x | bash -</span>
+
+  <span class="comment"># تثبيت Node.js</span>
+  <span class="cmd">apt install -y nodejs</span>
+
+  <span class="comment"># التحقق من التثبيت</span>
+  <span class="cmd">node --version</span>   <span class="comment"># يجب أن يظهر v20.x.x</span>
+  <span class="cmd">npm --version</span>    <span class="comment"># يجب أن يظهر 10.x.x</span>
+    </div>
+
+    <h3>ثالثاً: تثبيت PostgreSQL</h3>
+    <div class="code-block">
+  <span class="comment"># تثبيت PostgreSQL</span>
+  <span class="cmd">apt install -y postgresql postgresql-contrib</span>
+
+  <span class="comment"># تشغيل PostgreSQL تلقائياً</span>
+  <span class="cmd">systemctl enable postgresql</span>
+  <span class="cmd">systemctl start postgresql</span>
+    </div>
+
+    <h3>رابعاً: تثبيت PM2 و Nginx</h3>
+    <div class="code-block">
+  <span class="comment"># تثبيت PM2 (مدير العمليات)</span>
+  <span class="cmd">npm install -g pm2</span>
+
+  <span class="comment"># تثبيت Nginx (الويب سيرفر)</span>
+  <span class="cmd">apt install -y nginx</span>
+
+  <span class="comment"># تشغيل Nginx</span>
+  <span class="cmd">systemctl enable nginx</span>
+  <span class="cmd">systemctl start nginx</span>
+    </div>
+
+    <h3>خامساً: إنشاء مجلد المشروع</h3>
+    <div class="code-block">
+  <span class="comment"># إنشاء مجلد التطبيق</span>
+  <span class="cmd">mkdir -p /var/www/falcon-iptv</span>
+  <span class="cmd">cd /var/www/falcon-iptv</span>
+    </div>
+  </div>
+
+  <!-- PAGE 4: Upload Files -->
+  <div class="page">
+    <div class="page-header">
+      <span class="step-badge">الخطوة 4</span>
+      <h2 class="section-title">📤 رفع الملفات إلى السيرفر</h2>
+    </div>
+
+    <h3>الطريقة الأولى (موصى بها): عبر GitHub</h3>
+    <p>إذا رفعت المشروع على GitHub مسبقاً، هذه هي أسهل طريقة:</p>
+    
+    <div class="code-block">
+  <span class="comment"># تثبيت Git</span>
+  <span class="cmd">apt install -y git</span>
+
+  <span class="comment"># الانتقال لمجلد التطبيق</span>
+  <span class="cmd">cd /var/www/falcon-iptv</span>
+
+  <span class="comment"># سحب المشروع (غيّر الرابط بالرابط الخاص بك)</span>
+  <span class="cmd">git clone https://github.com/اسمك/falcon-iptv.git .</span>
+
+  <span class="comment"># بناء المشروع على السيرفر</span>
+  <span class="cmd">npm install</span>
+  <span class="cmd">npm run build</span>
+    </div>
+
+    <div class="success-box">✅ هذه الطريقة تُبقي المشروع محدّثاً — في كل تحديث فقط اكتب: <code>git pull && npm run build</code></div>
+
+    <h3>الطريقة الثانية: رفع يدوي عبر FileZilla/WinSCP</h3>
+    
+    <ol class="steps-list">
+      <li>
+        <div class="step-content">
+          <div class="step-title">افتح WinSCP أو FileZilla</div>
+          <div class="step-desc">اختر بروتوكول SFTP</div>
+        </div>
+      </li>
+      <li>
+        <div class="step-content">
+          <div class="step-title">أدخل بيانات الاتصال:</div>
+          <div class="step-desc">Host: IP السيرفر | Username: root | Password: كلمة مرور Hostinger | Port: 22</div>
+        </div>
+      </li>
+      <li>
+        <div class="step-content">
+          <div class="step-title">انتقل لمجلد /var/www/falcon-iptv على السيرفر</div>
+          <div class="step-desc">من الجانب الأيمن في FileZilla</div>
+        </div>
+      </li>
+      <li>
+        <div class="step-content">
+          <div class="step-title">ارفع هذه الملفات/المجلدات فقط:</div>
+          <div class="step-desc">📁 dist/ | 📄 package.json | 📄 drizzle.config.ts | 📁 shared/ | 📁 migrations/ (إن وجد)</div>
+        </div>
+      </li>
+      <li>
+        <div class="step-content">
+          <div class="step-title">بعد الرفع، ثبّت الحزم عبر SSH:</div>
+          <div class="step-desc">اكتب في SSH: <code>cd /var/www/falcon-iptv && npm install --production</code></div>
+        </div>
+      </li>
+    </ol>
+
+    <div class="warning-box">
+      ⚠️ <strong>لا ترفع:</strong> مجلد <code>node_modules/</code> (حجمه كبير جداً ويختلف بين الأنظمة) — سيُثبَّت تلقائياً بأمر <code>npm install</code>
+    </div>
+  </div>
+
+  <!-- PAGE 5: Database Setup -->
+  <div class="page">
+    <div class="page-header">
+      <span class="step-badge">الخطوة 5</span>
+      <h2 class="section-title">🗄️ إعداد قاعدة البيانات PostgreSQL</h2>
+    </div>
+
+    <h3>إنشاء قاعدة البيانات والمستخدم</h3>
+    <p>عبر SSH، اتصل بـ PostgreSQL:</p>
+    
+    <div class="code-block">
+  <span class="comment"># الدخول على PostgreSQL</span>
+  <span class="cmd">sudo -u postgres psql</span>
+    </div>
+
+    <p>بعد الدخول، اكتب هذه الأوامر (غيّر كلمة المرور):</p>
+
+    <div class="code-block">
+  <span class="comment">-- إنشاء مستخدم قاعدة البيانات</span>
+  <span class="kw">CREATE USER</span> falcon_user <span class="kw">WITH PASSWORD</span> <span class="val">'كلمة_مرور_قوية'</span>;
+
+  <span class="comment">-- إنشاء قاعدة البيانات</span>
+  <span class="kw">CREATE DATABASE</span> falcon_iptv <span class="kw">OWNER</span> falcon_user;
+
+  <span class="comment">-- إعطاء الصلاحيات</span>
+  <span class="kw">GRANT ALL PRIVILEGES ON DATABASE</span> falcon_iptv <span class="kw">TO</span> falcon_user;
+
+  <span class="comment">-- الخروج</span>
+  <span class="kw">\q</span>
+    </div>
+
+    <h3>اختبار الاتصال بقاعدة البيانات</h3>
+    <div class="code-block">
+  <span class="cmd">psql -U falcon_user -d falcon_iptv -h localhost</span>
+  <span class="comment"># أدخل كلمة المرور — إذا دخلت فالاتصال ناجح</span>
+  <span class="comment"># اكتب \q للخروج</span>
+    </div>
+
+    <div class="success-box">
+      ✅ <strong>رابط قاعدة البيانات الذي ستستخدمه:</strong><br>
+      <code>postgresql://falcon_user:كلمة_مرور_قوية@localhost:5432/falcon_iptv</code>
+    </div>
+
+    <h3>تطبيق مخطط قاعدة البيانات</h3>
+    <p>بعد إعداد ملف .env (الخطوة التالية)، شغّل هذا الأمر لإنشاء جداول قاعدة البيانات:</p>
+    <div class="code-block">
+  <span class="cmd">cd /var/www/falcon-iptv</span>
+  <span class="cmd">npm run db:push</span>
+    </div>
+
+    <div class="info-box">
+      💡 <code>npm run db:push</code> يقرأ <code>shared/schema.ts</code> وينشئ جميع الجداول تلقائياً في قاعدة البيانات
+    </div>
+  </div>
+
+  <!-- PAGE 6: Environment Variables -->
+  <div class="page">
+    <div class="page-header">
+      <span class="step-badge">الخطوة 6</span>
+      <h2 class="section-title">⚙️ متغيرات البيئة (.env)</h2>
+    </div>
+
+    <p>أنشئ ملف <code>.env</code> في مجلد المشروع:</p>
+
+    <div class="code-block">
+  <span class="cmd">nano /var/www/falcon-iptv/.env</span>
+    </div>
+
+    <p>أضف هذا المحتوى (غيّر القيم بما يناسبك):</p>
+
+    <div class="code-block">
+  <span class="comment"># ======================================</span>
+  <span class="comment"># قاعدة البيانات — غيّر القيم أدناه</span>
+  <span class="comment"># ======================================</span>
+  <span class="val">DATABASE_URL</span>=postgresql://falcon_user:<span class="kw">كلمة_المرور</span>@localhost:5432/falcon_iptv
+
+  <span class="comment"># ======================================</span>
+  <span class="comment"># أمان الجلسات — اجعلها عشوائية وطويلة</span>
+  <span class="comment"># ======================================</span>
+  <span class="val">SESSION_SECRET</span>=<span class="kw">أي_نص_عشوائي_طويل_هنا_مثلاً_abc123xyz456def789</span>
+
+  <span class="comment"># ======================================</span>
+  <span class="comment"># بيئة التشغيل</span>
+  <span class="comment"># ======================================</span>
+  <span class="val">NODE_ENV</span>=production
+
+  <span class="comment"># ======================================</span>
+  <span class="comment"># البورت (اتركه 5000)</span>
+  <span class="comment"># ======================================</span>
+  <span class="val">PORT</span>=5000
+    </div>
+
+    <p>احفظ الملف: اضغط <strong>Ctrl+O</strong> ثم Enter ثم <strong>Ctrl+X</strong> للخروج</p>
+
+    <div class="danger-box">
+      🔒 <strong>أمان مهم:</strong> لا تشارك ملف .env مع أحد ولا ترفعه على GitHub. يحتوي على كلمات مرور قاعدة البيانات.
+    </div>
+
+    <h3>توليد SESSION_SECRET عشوائي</h3>
+    <p>يمكنك توليد قيمة عشوائية قوية عبر:</p>
+    <div class="code-block">
+  <span class="cmd">node -e "console.log(require('crypto').randomBytes(64).toString('hex'))"</span>
+    </div>
+    <p>انسخ الناتج وضعه كقيمة لـ <code>SESSION_SECRET</code></p>
+
+    <h3>تحميل متغيرات البيئة تلقائياً</h3>
+    <p>تأكد من تثبيت dotenv (مثبت مسبقاً في المشروع):</p>
+    <div class="code-block">
+  <span class="comment"># التحقق أن المشروع يقرأ .env</span>
+  <span class="cmd">cat /var/www/falcon-iptv/.env</span>
+    </div>
+  </div>
+
+  <!-- PAGE 7: First Run -->
+  <div class="page">
+    <div class="page-header">
+      <span class="step-badge">الخطوة 7</span>
+      <h2 class="section-title">🚀 تشغيل المشروع لأول مرة</h2>
+    </div>
+
+    <h3>1. تثبيت الحزم</h3>
+    <div class="code-block">
+  <span class="cmd">cd /var/www/falcon-iptv</span>
+  <span class="cmd">npm install --production</span>
+    </div>
+
+    <h3>2. تطبيق قاعدة البيانات (مرة واحدة فقط)</h3>
+    <div class="code-block">
+  <span class="comment"># يجب أن يكون ملف .env موجوداً أولاً</span>
+  <span class="cmd">npm run db:push</span>
+    </div>
+    <div class="success-box">✅ سيُنشئ هذا جميع الجداول تلقائياً (orders, products, digital_cards, الخ)</div>
+
+    <h3>3. اختبار التشغيل</h3>
+    <div class="code-block">
+  <span class="comment"># تشغيل تجريبي للتأكد من عدم وجود أخطاء</span>
+  <span class="cmd">NODE_ENV=production node dist/index.cjs</span>
+    </div>
+    <p>يجب أن ترى في الطرفية:</p>
+    <div class="code-block">
+  <span class="val">serving on port 5000</span>
+    </div>
+    <p>جرّب زيارة: <code>http://IP_السيرفر:5000</code> من المتصفح</p>
+
+    <div class="info-box">
+      💡 إذا ظهر الموقع = كل شيء يعمل! اضغط <strong>Ctrl+C</strong> لإيقافه، ثم شغّله عبر PM2 (الخطوة التالية)
+    </div>
+
+    <h3>⚡ بيانات الدخول للوحة الإدارة</h3>
+    <table>
+      <thead>
+        <tr><th>الحقل</th><th>القيمة</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>الرابط</td><td><code>http://موقعك.com/admin</code></td></tr>
+        <tr><td>اسم المستخدم</td><td><code>admin</code></td></tr>
+        <tr><td>كلمة المرور</td><td><code>falcon@2024</code></td></tr>
+      </tbody>
+    </table>
+    <div class="danger-box">🔒 <strong>غيّر كلمة المرور فور الدخول الأول</strong> من تبويب "الحساب" في لوحة الإدارة</div>
+  </div>
+
+  <!-- PAGE 8: PM2 -->
+  <div class="page">
+    <div class="page-header">
+      <span class="step-badge">الخطوة 8</span>
+      <h2 class="section-title">⚡ إعداد PM2 (تشغيل مستمر)</h2>
+    </div>
+
+    <p>PM2 يضمن أن التطبيق يعمل دائماً — حتى بعد إعادة تشغيل السيرفر</p>
+
+    <h3>تشغيل التطبيق عبر PM2</h3>
+    <div class="code-block">
+  <span class="cmd">cd /var/www/falcon-iptv</span>
+
+  <span class="comment"># تشغيل التطبيق</span>
+  <span class="cmd">pm2 start dist/index.cjs --name falcon-iptv --env production</span>
+
+  <span class="comment"># حفظ إعدادات PM2 (لتشغيل تلقائي بعد إعادة التشغيل)</span>
+  <span class="cmd">pm2 save</span>
+
+  <span class="comment"># إعداد PM2 للتشغيل مع النظام</span>
+  <span class="cmd">pm2 startup</span>
+  <span class="comment"># شغّل الأمر الذي يظهره PM2 بعد هذا الأمر</span>
+    </div>
+
+    <h3>أوامر PM2 المفيدة</h3>
+    <table>
+      <thead>
+        <tr><th>الأمر</th><th>الاستخدام</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>pm2 status</code></td><td>عرض حالة التطبيقات</td></tr>
+        <tr><td><code>pm2 logs falcon-iptv</code></td><td>عرض السجلات (مفيد لتتبع الأخطاء)</td></tr>
+        <tr><td><code>pm2 restart falcon-iptv</code></td><td>إعادة تشغيل التطبيق</td></tr>
+        <tr><td><code>pm2 stop falcon-iptv</code></td><td>إيقاف التطبيق</td></tr>
+        <tr><td><code>pm2 delete falcon-iptv</code></td><td>حذف التطبيق من PM2</td></tr>
+        <tr><td><code>pm2 monit</code></td><td>مراقبة استخدام CPU والذاكرة</td></tr>
+      </tbody>
+    </table>
+
+    <div class="success-box">✅ الآن التطبيق يعمل على المنفذ 5000 باستمرار. الخطوة التالية ربطه بالدومين عبر Nginx</div>
+
+    <h3>ملف ecosystem.config.cjs (اختياري - موصى به)</h3>
+    <p>أنشئ هذا الملف لإعدادات PM2 الأكثر تحكماً:</p>
+    <div class="code-block">
+  <span class="cmd">nano /var/www/falcon-iptv/ecosystem.config.cjs</span>
+    </div>
+    <div class="code-block">
+  module.exports = {
+    apps: [{
+      name: <span class="val">'falcon-iptv'</span>,
+      script: <span class="val">'dist/index.cjs'</span>,
+      env_production: {
+        NODE_ENV: <span class="val">'production'</span>,
+        PORT: <span class="val">5000</span>
+      },
+      instances: 1,
+      autorestart: <span class="kw">true</span>,
+      watch: <span class="kw">false</span>,
+      max_memory_restart: <span class="val">'500M'</span>
+    }]
+  };
+    </div>
+    <div class="code-block">
+  <span class="comment"># تشغيل باستخدام ملف الإعداد</span>
+  <span class="cmd">pm2 start ecosystem.config.cjs --env production</span>
+    </div>
+  </div>
+
+  <!-- PAGE 9: Nginx -->
+  <div class="page">
+    <div class="page-header">
+      <span class="step-badge">الخطوة 9</span>
+      <h2 class="section-title">🌐 إعداد Nginx (ربط الدومين)</h2>
+    </div>
+
+    <div class="info-box">
+      📡 قبل هذه الخطوة، اذهب لمزود الدومين (Namecheap, GoDaddy, الخ) وأضف سجل DNS:
+      <br><strong>A Record: @ → IP السيرفر</strong>
+      <br>انتظر 5-30 دقيقة حتى يتم النشر
+    </div>
+
+    <h3>إنشاء ملف إعداد Nginx</h3>
+    <div class="code-block">
+  <span class="cmd">nano /etc/nginx/sites-available/falcon-iptv</span>
+    </div>
+
+    <p>أضف هذا المحتوى (غيّر <code>موقعك.com</code> بدومينك الحقيقي):</p>
+
+    <div class="code-block">
+  server {
+      listen 80;
+      server_name <span class="val">موقعك.com www.موقعك.com</span>;
+
+      location / {
+          proxy_pass http://localhost:<span class="val">5000</span>;
+          proxy_http_version 1.1;
+          proxy_set_header Upgrade $http_upgrade;
+          proxy_set_header Connection 'upgrade';
+          proxy_set_header Host $host;
+          proxy_set_header X-Real-IP $remote_addr;
+          proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+          proxy_set_header X-Forwarded-Proto $scheme;
+          proxy_cache_bypass $http_upgrade;
+          client_max_body_size 50M;
+      }
+  }
+    </div>
+
+    <h3>تفعيل الإعداد</h3>
+    <div class="code-block">
+  <span class="comment"># ربط الملف بالمجلد النشط</span>
+  <span class="cmd">ln -s /etc/nginx/sites-available/falcon-iptv /etc/nginx/sites-enabled/</span>
+
+  <span class="comment"># اختبار صحة الإعداد</span>
+  <span class="cmd">nginx -t</span>
+  <span class="comment"># يجب أن يظهر: syntax is ok + test is successful</span>
+
+  <span class="comment"># إعادة تشغيل Nginx</span>
+  <span class="cmd">systemctl reload nginx</span>
+    </div>
+
+    <div class="success-box">✅ الآن يمكن الوصول للموقع عبر: <code>http://موقعك.com</code></div>
+  </div>
+
+  <!-- PAGE 10: SSL -->
+  <div class="page">
+    <div class="page-header">
+      <span class="step-badge">الخطوة 10</span>
+      <h2 class="section-title">🔒 شهادة SSL مجانية (HTTPS)</h2>
+    </div>
+
+    <p>بعد أن تأكدت أن الموقع يعمل عبر HTTP، ثبّت شهادة SSL مجانية:</p>
+
+    <h3>تثبيت Certbot</h3>
+    <div class="code-block">
+  <span class="comment"># تثبيت Certbot</span>
+  <span class="cmd">apt install -y certbot python3-certbot-nginx</span>
+
+  <span class="comment"># طلب شهادة SSL (غيّر موقعك.com)</span>
+  <span class="cmd">certbot --nginx -d موقعك.com -d www.موقعك.com</span>
+    </div>
+
+    <p>اتبع التعليمات:</p>
+    <ol class="steps-list">
+      <li>
+        <div class="step-content">
+          <div class="step-title">أدخل بريدك الإلكتروني</div>
+          <div class="step-desc">للإشعارات المتعلقة بالشهادة</div>
+        </div>
+      </li>
+      <li>
+        <div class="step-content">
+          <div class="step-title">اضغط A للموافقة على الشروط</div>
+        </div>
+      </li>
+      <li>
+        <div class="step-content">
+          <div class="step-title">اختر: 2 — Redirect (إعادة توجيه HTTP → HTTPS)</div>
+          <div class="step-desc">هذا يجعل الموقع آمناً تلقائياً</div>
+        </div>
+      </li>
+    </ol>
+
+    <div class="success-box">🎉 الموقع الآن يعمل على HTTPS! الشهادة تتجدد تلقائياً كل 90 يوم</div>
+
+    <h3>التحقق من التجديد التلقائي</h3>
+    <div class="code-block">
+  <span class="cmd">certbot renew --dry-run</span>
+  <span class="comment"># يجب أن يظهر: Congratulations, all simulated renewals succeeded</span>
+    </div>
+
+    <div class="success-box">
+      🦅 <strong>تهانينا!</strong> موقع فالكون IPTV يعمل بالكامل على:
+      <br><strong>https://موقعك.com</strong>
+    </div>
+  </div>
+
+  <!-- PAGE 11: Files Summary -->
+  <div class="page">
+    <div class="page-header">
+      <span class="step-badge">الخطوة 11</span>
+      <h2 class="section-title">📁 الملفات التي ترفعها فقط</h2>
+    </div>
+
+    <h3>البنية الكاملة على السيرفر</h3>
+    <div class="code-block">
+  /var/www/falcon-iptv/
+  ├── <span class="val">dist/</span>                    ← مجلد البناء (الأهم)
+  │   ├── <span class="kw">index.cjs</span>            ← الخادم الكامل
+  │   └── <span class="val">public/</span>              ← الموقع الأمامي
+  │       ├── <span class="kw">index.html</span>
+  │       └── <span class="val">assets/</span>
+  │           ├── index-xxxx.js
+  │           └── index-xxxx.css
+  ├── <span class="val">shared/</span>
+  │   └── <span class="kw">schema.ts</span>            ← مخطط قاعدة البيانات
+  ├── <span class="kw">drizzle.config.ts</span>        ← إعدادات Drizzle
+  ├── <span class="kw">package.json</span>             ← قائمة الحزم
+  ├── <span class="kw">.env</span>                     ← متغيرات البيئة (أنشئه على السيرفر)
+  └── <span class="val">node_modules/</span>            ← (يُثبَّت تلقائياً بـ npm install)
+    </div>
+
+    <h3>أمر نسخ احتياطي سريع</h3>
+    <div class="code-block">
+  <span class="comment"># نسخ احتياطي لقاعدة البيانات</span>
+  <span class="cmd">pg_dump -U falcon_user falcon_iptv > backup_$(date +%Y%m%d).sql</span>
+    </div>
+
+    <h3>تحديث المشروع مستقبلاً</h3>
+    <div class="code-block">
+  <span class="comment"># إذا استخدمت GitHub:</span>
+  <span class="cmd">cd /var/www/falcon-iptv</span>
+  <span class="cmd">git pull</span>
+  <span class="cmd">npm install --production</span>
+  <span class="cmd">npm run build</span>
+  <span class="cmd">pm2 restart falcon-iptv</span>
+    </div>
+
+    <div class="code-block">
+  <span class="comment"># إذا رفعت يدوياً:</span>
+  <span class="comment"># 1. ارفع dist/ الجديد عبر FileZilla</span>
+  <span class="comment"># 2. ثم أعد تشغيل PM2:</span>
+  <span class="cmd">pm2 restart falcon-iptv</span>
+    </div>
+
+    <h3>منافذ الجدار الناري</h3>
+    <div class="code-block">
+  <span class="comment"># فتح المنافذ المطلوبة</span>
+  <span class="cmd">ufw allow 22    </span><span class="comment"># SSH</span>
+  <span class="cmd">ufw allow 80    </span><span class="comment"># HTTP</span>
+  <span class="cmd">ufw allow 443   </span><span class="comment"># HTTPS</span>
+  <span class="cmd">ufw enable</span>
+    </div>
+  </div>
+
+  <!-- PAGE 12: Troubleshooting -->
+  <div class="page">
+    <div class="page-header">
+      <span class="step-badge">الخطوة 12</span>
+      <h2 class="section-title">🛠️ استكشاف الأخطاء الشائعة</h2>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>المشكلة</th>
+          <th>السبب</th>
+          <th>الحل</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>الموقع لا يفتح</td>
+          <td>PM2 متوقف أو Nginx</td>
+          <td><code>pm2 status</code> و <code>systemctl status nginx</code></td>
+        </tr>
+        <tr>
+          <td>خطأ قاعدة البيانات</td>
+          <td>DATABASE_URL خاطئ</td>
+          <td>تحقق من <code>.env</code> ومن أن PostgreSQL يعمل</td>
+        </tr>
+        <tr>
+          <td>502 Bad Gateway</td>
+          <td>التطبيق لا يعمل على 5000</td>
+          <td><code>pm2 restart falcon-iptv</code></td>
+        </tr>
+        <tr>
+          <td>خطأ npm install</td>
+          <td>ذاكرة RAM منخفضة</td>
+          <td>أضف Swap: <code>fallocate -l 2G /swapfile</code></td>
+        </tr>
+        <tr>
+          <td>SSL لا يعمل</td>
+          <td>DNS لم ينتشر بعد</td>
+          <td>انتظر 30 دقيقة وأعد المحاولة</td>
+        </tr>
+        <tr>
+          <td>db:push يفشل</td>
+          <td>المستخدم لا يملك صلاحيات</td>
+          <td>أعد خطوة إعداد PostgreSQL وتأكد من الصلاحيات</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>عرض سجلات التطبيق</h3>
+    <div class="code-block">
+  <span class="comment"># سجلات PM2</span>
+  <span class="cmd">pm2 logs falcon-iptv --lines 50</span>
+
+  <span class="comment"># سجلات Nginx</span>
+  <span class="cmd">tail -f /var/log/nginx/error.log</span>
+
+  <span class="comment"># سجلات النظام</span>
+  <span class="cmd">journalctl -u nginx -n 50</span>
+    </div>
+
+    <h3>إضافة ذاكرة مؤقتة (Swap) إذا كانت الـ RAM 1GB</h3>
+    <div class="code-block">
+  <span class="cmd">fallocate -l 2G /swapfile</span>
+  <span class="cmd">chmod 600 /swapfile</span>
+  <span class="cmd">mkswap /swapfile</span>
+  <span class="cmd">swapon /swapfile</span>
+  <span class="cmd">echo '/swapfile none swap sw 0 0' | tee -a /etc/fstab</span>
+    </div>
+
+    <div class="footer-bar">
+      🦅 فالكون IPTV — دليل النشر على Hostinger | جميع الأوامر مختبرة على Ubuntu 22.04 LTS
+    </div>
+  </div>
+
+  </body>
+  </html>
